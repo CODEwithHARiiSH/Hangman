@@ -129,7 +129,18 @@ def test_play_round_game_win():
                                                                turns_remaining)
     assert next_action == "CONGRATZZ YOU WON"
 
-
+def test_play_round_repeated_guess():
+    secret_word = "rhino"
+    guesses = ['r','h']
+    guess = "h"
+    turns_remaining = 5
+    guesses, turns_remaining, next_action = hangman.play_round(secret_word,
+                                                               guesses,
+                                                               guess,
+                                                               turns_remaining)
+    assert guesses == ['r', 'h']
+    assert turns_remaining == 5
+    assert next_action == "Keep Guessing"
 
 
 
