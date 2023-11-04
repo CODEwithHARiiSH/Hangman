@@ -37,6 +37,11 @@ def test_mask_word_no_guesses():
     masked_word = hangman.get_mask_word(word, guesses)
     assert masked_word == "---"
 
+def test_mask_word_single_wrong_guess():
+    guesses = ['x']
+    word = "elephant"
+    masked_word = hangman.get_mask_word(word, guesses)
+    assert masked_word == "--------"
 
 
 
