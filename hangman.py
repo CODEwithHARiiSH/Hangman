@@ -37,6 +37,8 @@ Guesses so far : {guesses}
 def play_round(secret_word, guesses, guess, turns_remaining):
     action = "Keep Guessing"
     guesses.append(guess)
+    if "-" not in get_mask_word(secret_word, guesses):
+        return guesses, turns_remaining, "CONGRATZZ YOU WON"
     if guess not in secret_word:
         turns_remaining -=1
         if turns_remaining == 0:
