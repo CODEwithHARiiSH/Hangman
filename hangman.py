@@ -13,5 +13,31 @@ def get_word(wordlist="/usr/share/dict/words"):
             elif len(word) < 5:
                 continue
             good_words.append(word)
-    return random.choice(good_words)
-        
+    secret_word= random.choice(good_words)
+    return secret_word
+    
+    
+
+    
+
+            
+
+    
+
+
+    
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
