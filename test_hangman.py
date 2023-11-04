@@ -77,7 +77,18 @@ Guesses so far : icx
 
 
 
-
+def test_play_round_correct_guess():
+    secret_word = "rhino"
+    guesses = []
+    guess = "i"
+    turns_remaining = 8
+    guesses, turns_remaining, next_action = hangman.play_round(secret_word,
+                                                               guesses,
+                                                               guess,
+                                                               turns_remaining)
+    assert guesses == ['i']
+    assert turns_remaining == 8
+    assert next_action == "Keep Guessing"
 
 
 
