@@ -36,6 +36,8 @@ Guesses so far : {guesses}
 
 def play_round(secret_word, guesses, guess, turns_remaining):
     guesses.append(guess)
+    if guess not in secret_word:
+        turns_remaining -=1
     return guesses, turns_remaining, "Keep Guessing"    
 
     

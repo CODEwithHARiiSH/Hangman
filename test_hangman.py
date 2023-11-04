@@ -103,7 +103,7 @@ def test_play_round_wrong_guess_game_not_over():
                                                                turns_remaining)
     assert guesses == ['q','x']
     assert turns_remaining == 7
-    assert next_action == "next"
+    assert next_action == "Keep Guessing"
 
 
 
