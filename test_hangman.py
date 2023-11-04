@@ -160,7 +160,7 @@ def test_play_round_notAlphabet_guess():
 def test_play_round_notAlphabet_guess():
     secret_word = "rhino"
     guesses = ["r" , "h"]
-    guess = "A"
+    guess = "R"
     turns_remaining = 5
     guesses, turns_remaining, next_action = hangman.play_round(secret_word,
                                                                guesses,
