@@ -36,6 +36,8 @@ Guesses so far : {guesses}
 
 def play_round(secret_word, guesses, guess, turns_remaining):
     action = "Keep Guessing"
+    if not guess.isalpha():
+        return guesses, turns_remaining, "Invalid Entry -----> Keep Guessing"
     if guess in guesses:
         return guesses, turns_remaining, action
     guesses.append(guess)
