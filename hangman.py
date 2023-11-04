@@ -31,7 +31,12 @@ def get_status(secret_word, turns_remaining, guesses):
     return f"""Secret word : {masked_word}
 Turns remaining : {turns_remaining}
 Guesses so far : {guesses}
-"""    
+"""
+
+
+def play_round(secret_word, guesses, guess, turns_remaining):
+    guesses.append(guess)
+    return guesses, turns_remaining, "Keep Guessing"    
 
     
 
