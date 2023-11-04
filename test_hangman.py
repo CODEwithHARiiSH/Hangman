@@ -157,7 +157,18 @@ def test_play_round_notAlphabet_guess():
     assert next_action == "Invalid Entry -----> Keep Guessing"    
 
 
-
+def test_play_round_notAlphabet_guess():
+    secret_word = "rhino"
+    guesses = ["r" , "h"]
+    guess = "A"
+    turns_remaining = 5
+    guesses, turns_remaining, next_action = hangman.play_round(secret_word,
+                                                               guesses,
+                                                               guess,
+                                                               turns_remaining)
+    assert guesses == ['r', 'h']
+    assert turns_remaining == 5
+    assert next_action == "Invalid Entry -----> Keep Guessing"
 
 
 
