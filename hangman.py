@@ -17,7 +17,12 @@ def get_word(wordlist="/usr/share/dict/words"):
     return secret_word
     
 def get_mask_word(word, guesses):
-    return "---"
+    ret=[]
+    for i in word:
+        if i in guesses:
+            ret.append(i)
+        ret.append("-")
+    return "".join(ret)
     
     
 
