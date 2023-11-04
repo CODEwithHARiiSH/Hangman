@@ -92,6 +92,18 @@ def test_play_round_correct_guess():
 
 
 
+def test_play_round_wrong_guess_game_not_over():
+    secret_word = "rhino"
+    guesses = ['q']
+    guess = "x"
+    turns_remaining = 8
+    guesses, turns_remaining, next_action = hangman.play_round(secret_word,
+                                                               guesses,
+                                                               guess,
+                                                               turns_remaining)
+    assert guesses == ['q','x']
+    assert turns_remaining == 7
+    assert next_action == "next"
 
 
 
