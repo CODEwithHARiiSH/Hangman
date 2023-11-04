@@ -70,11 +70,10 @@ def test_get_status():
                                  turns_remaining,
                                  guesses,
                                  )
-    assert status ==  """
-                         Secret word : ---ic----
-                         Turns remaining : 75
-                         Guesses so far : icx
-                      """
+    assert status ==  """Secret word : ---ic----
+Turns remaining : 75
+Guesses so far : icx
+"""
 
 
 
