@@ -16,7 +16,8 @@ def get_word(wordlist="/usr/share/dict/words"):
     secret_word= random.choice(good_words)
     return secret_word
     
-
+def get_mask_word(word, guesses):
+    return "---"
     
     
 
