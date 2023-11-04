@@ -115,7 +115,7 @@ def test_play_round_wrong_guess_game_over():
                                                                guesses,
                                                                guess,
                                                                turns_remaining)
-    assert next_action == "game_over"
+    assert next_action == "GAME__OVER"
 
 
 
