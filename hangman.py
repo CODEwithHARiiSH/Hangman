@@ -53,6 +53,20 @@ def play_round(secret_word, guesses, guess, turns_remaining):
             return guesses, turns_remaining, "GAME__OVER" 
     return guesses, turns_remaining, action    
 
+def get_image(turns_remaining):
+    return """
+      
+----------
+|        |
+|
+|
+|
+|
+|
+|
+|
+"""
+    
     
 
             
