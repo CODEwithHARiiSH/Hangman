@@ -54,11 +54,28 @@ def play_round(secret_word, guesses, guess, turns_remaining):
     return guesses, turns_remaining, action    
 
 def get_image(turns_remaining):
-    return """
+    if turns_remaining == 6:
+    
+        return """
       
 ----------
 |        |
 |
+|
+|
+|
+|
+|
+|
+"""
+
+    if turns_remaining == 5:
+    
+        return """
+      
+----------
+|        |
+|        0
 |
 |
 |
