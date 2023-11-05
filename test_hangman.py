@@ -248,7 +248,21 @@ def test_get_hangman_image_turn3():
 |
 """
 
-
+def test_get_hangman_image_turn3():
+    turns_remaining=2
+    image=hangman.get_image(turns_remaining)
+    assert image == """
+      
+----------
+|        |
+|        0
+|       /|\
+|
+|
+|
+|
+|
+"""
 
 
 
