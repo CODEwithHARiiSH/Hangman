@@ -248,7 +248,7 @@ def test_get_hangman_image_turn3():
 |
 """
 
-def test_get_hangman_image_turn3():
+def test_get_hangman_image_turn2():
     turns_remaining=2
     image=hangman.get_image(turns_remaining)
     assert image == """
@@ -264,7 +264,7 @@ def test_get_hangman_image_turn3():
 |
 """
 
-def test_get_hangman_image_turn3():
+def test_get_hangman_image_turn1():
     turns_remaining=1
     image=hangman.get_image(turns_remaining)
     assert image == """
@@ -281,7 +281,7 @@ def test_get_hangman_image_turn3():
 """
 
 
-def test_get_hangman_image_turn3():
+def test_get_hangman_image_turn0():
     turns_remaining=0
     image=hangman.get_image(turns_remaining)
     assert image == """
