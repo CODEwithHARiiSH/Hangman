@@ -184,7 +184,7 @@ def test_play_round_twoEntry_guess():
     assert next_action == "Invalid Entry -----> Keep Guessing"
 
 
-def test_get_hangman_image_turn5():
+def test_get_hangman_image_start():
     turns_remaining=6
     image=hangman.get_image(turns_remaining)
     assert image == """
@@ -200,7 +200,7 @@ def test_get_hangman_image_turn5():
 |
 """
 
-def test_get_hangman_image_start():
+def test_get_hangman_image_turn5():
     turns_remaining=5
     image=hangman.get_image(turns_remaining)
     assert image == """
@@ -216,8 +216,37 @@ def test_get_hangman_image_start():
 |
 """
 
+def test_get_hangman_image_turn4():
+    turns_remaining=4
+    image=hangman.get_image(turns_remaining)
+    assert image == """
+      
+----------
+|        |
+|        0
+|        |
+|
+|
+|
+|
+|
+"""
 
-
+def test_get_hangman_image_turn3():
+    turns_remaining=3
+    image=hangman.get_image(turns_remaining)
+    assert image == """
+      
+----------
+|        |
+|        0
+|       /|
+|
+|
+|
+|
+|
+"""
 
 
 

@@ -69,7 +69,7 @@ def get_image(turns_remaining):
 |
 """
 
-    if turns_remaining == 5:
+    elif turns_remaining == 5:
     
         return """
       
@@ -84,9 +84,35 @@ def get_image(turns_remaining):
 |
 """
     
+    elif turns_remaining == 4:
     
+        return """
+      
+----------
+|        |
+|        0
+|        |
+|
+|
+|
+|
+|
+"""  
 
-            
+    elif turns_remaining == 3:
+    
+        return """
+      
+----------
+|        |
+|        0
+|       /|
+|
+|
+|
+|
+|
+"""             
 
     
 
