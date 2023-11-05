@@ -130,9 +130,35 @@ def get_image(turns_remaining):
 |
 """ 
 
+    elif turns_remaining == 1:
     
+        return """
+      
+----------
+|        |
+|        0
+|       /|\
+|       /
+|
+|
+|
+|
+"""     
     
-
+    elif turns_remaining == 0:
+    
+        return """
+      
+----------
+|        |
+|        0
+|       /|\
+|       / \
+|
+|
+|
+|
+""" 
 
 
     
