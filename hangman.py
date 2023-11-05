@@ -122,7 +122,7 @@ def get_image(turns_remaining):
 ----------
 |        |
 |        0
-|       /|\
+|       /|/
 |
 |
 |
@@ -137,7 +137,7 @@ def get_image(turns_remaining):
 ----------
 |        |
 |        0
-|       /|\
+|       /|/
 |       /
 |
 |
@@ -152,8 +152,8 @@ def get_image(turns_remaining):
 ----------
 |        |
 |        0
-|       /|\
-|       / \
+|       /|/
+|       / /
 |
 |
 |
@@ -161,7 +161,36 @@ def get_image(turns_remaining):
 """ 
 
 
-    
+def main():
+    print ("Welcome to Hangman!")
+    print ("-------------------\n\n")
+    secret_word = get_word()
+    turns_remaining = 6
+    guesses = []
+    action=""
+    while True:
+        status = get_status(secret_word, turns_remaining, guesses)
+        image = get_image(turns_remaining)
+        print(image)
+        print (status)
+        print(action)
+        guess = input("Enter your guess--->")
+        guesses, turns_remaining, next_action = play_round(secret_word, guesses, guess, turns_remaining)
+        action=next_action
+        if next_action == "GAME__OVER":
+            image = get_image(turns_remaining)
+            print(image)
+            print (f"You lost. The word is {secret_word}")
+            print(next_action)
+            break
+        if next_action == "CONGRATZZ YOU WON":
+            print (f"You won. The word is {secret_word}")
+            print(next_action)
+            break
+
+if __name__ == "__main__":
+    main()
+        
     
     
     

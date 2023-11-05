@@ -256,7 +256,7 @@ def test_get_hangman_image_turn2():
 ----------
 |        |
 |        0
-|       /|\
+|       /|/
 |
 |
 |
@@ -272,7 +272,7 @@ def test_get_hangman_image_turn1():
 ----------
 |        |
 |        0
-|       /|\
+|       /|/
 |       /
 |
 |
@@ -289,8 +289,8 @@ def test_get_hangman_image_turn0():
 ----------
 |        |
 |        0
-|       /|\
-|       / \
+|       /|/
+|       / /
 |
 |
 |
